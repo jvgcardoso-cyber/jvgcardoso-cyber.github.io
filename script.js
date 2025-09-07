@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'proj2',
             title: 'VOGUE',
             description: 'Editorial para a Vogue sobre a intersecção da forma humana com a natureza.',
-            coverImage: 'https://images.unsplash.com/photo-1589991399596-1055a4756a18?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+            coverImage: 'https://cdn.cosmos.so/54dbac93-9757-45bb-b930-809b096d0e2d?format=jpeg',
             gallery: [
                 'https://images.unsplash.com/photo-1521577902-b25840228b3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
                 'https://images.unsplash.com/photo-1605557626786-0565b6d5f47e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
