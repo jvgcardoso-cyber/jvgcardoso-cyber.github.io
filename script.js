@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 'https://images.unsplash.com/photo-1595535373190-fc96a29d9448?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200'
             ]
         }
-        // Adicione mais projetos aqui...
     ];
 
     const projectList = document.querySelector('.project-list');
