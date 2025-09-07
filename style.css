@@ -18,6 +18,10 @@ body {
     font-family: var(--font-family);
     overflow-x: hidden;
 }
+/* Evita a rolagem do corpo da página quando o modal estiver aberto */
+body.modal-open {
+    overflow: hidden;
+}
 
 .main-header {
     position: fixed;
@@ -49,11 +53,11 @@ body {
 }
 
 .project-list {
-    padding: 10rem var(--padding-sides) 10rem 0; /* Mais padding em cima/baixo para rolar */
+    padding: 10rem var(--padding-sides) 10rem 0;
     border-right: 1px solid #ccc;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Alinha o texto à direita */
+    align-items: flex-end;
 }
 
 .project-item {
@@ -62,16 +66,17 @@ body {
     margin: 2rem 0;
     padding-right: var(--padding-sides);
     transition: color 0.4s ease;
+    cursor: pointer;
 }
 
 .project-item h1 {
-    font-size: clamp(2rem, 6vw, 4.5rem); /* Tipografia grande e responsiva */
+    font-size: clamp(2rem, 6vw, 4.5rem);
     line-height: 1.1;
     text-align: right;
 }
 
 .project-item.is-visible {
-    color: var(--text-color); /* Cor do projeto ativo */
+    color: var(--text-color);
 }
 
 .project-preview {
@@ -97,7 +102,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cobre todo o espaço */
+    object-fit: cover;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s ease-in-out, visibility 0.8s;
@@ -106,4 +111,73 @@ body {
 .project-image.active {
     opacity: 1;
     visibility: visible;
+}
+
+/* --- NOVOS ESTILOS PARA O MODAL --- */
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.project-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-close-btn {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.modal-header {
+    text-align: center;
+    padding: 2rem 0 4rem 0;
+}
+
+.modal-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-header p {
+    font-size: 1rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.modal-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.modal-gallery img {
+    max-width: 100%;
+    height: auto;
 }
