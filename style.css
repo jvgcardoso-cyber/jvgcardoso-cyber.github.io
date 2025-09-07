@@ -18,9 +18,33 @@ body {
     font-family: var(--font-family);
     overflow-x: hidden;
 }
-/* Evita a rolagem do corpo da página quando o modal estiver aberto */
+
 body.modal-open {
     overflow: hidden;
+}
+/* Esconde o cursor padrão em desktops */
+@media (min-width: 1024px) {
+    body {
+        cursor: none;
+    }
+}
+
+.cursor {
+    display: none; /* Escondido por padrão, ativado via JS em desktops */
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out, background-color 0.2s;
+    z-index: 9999;
+}
+
+.cursor.hovered {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .main-header {
@@ -43,6 +67,16 @@ body.modal-open {
     text-decoration: none;
     color: var(--text-color);
     margin-left: 2rem;
+    position: relative;
+}
+.main-header a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-color);
 }
 
 .portfolio-container {
@@ -105,15 +139,16 @@ body.modal-open {
     object-fit: cover;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+    transform: scale(1.05); /* Efeito Ken Burns sutil */
+    transition: opacity 0.8s ease-in-out, visibility 0.8s, transform 5s ease-out;
 }
 
 .project-image.active {
     opacity: 1;
     visibility: visible;
+    transform: scale(1);
 }
 
-/* --- NOVOS ESTILOS PARA O MODAL --- */
 .project-modal {
     position: fixed;
     top: 0;
@@ -180,4 +215,81 @@ body.modal-open {
 .modal-gallery img {
     max-width: 100%;
     height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- ESTILOS PARA PÁGINAS ABOUT/CONTACT --- */
+.content-page-wrapper {
+    padding: 10rem var(--padding-sides);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.content-page p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: left;
+    margin: 0 2rem 1rem 0;
+}
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-color);
+}
+.contact-info h2 {
+    margin-top: 3rem;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* --- MEDIA QUERY PARA RESPONSIVIDADE MOBILE --- */
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Layout de uma coluna */
+    }
+    .project-preview {
+        display: none; /* Esconde a imagem de preview na home mobile */
+    }
+    .project-list {
+        border-right: none;
+        align-items: center; /* Centraliza a lista de projetos */
+        padding: 8rem var(--padding-sides);
+    }
+    .project-item {
+        padding-right: 0;
+    }
+    .project-item h1 {
+        text-align: center;
+    }
+    .modal-content {
+        width: 100%;
+        margin: 0;
+        padding: 6rem 1.5rem 2rem 1.5rem;
+    }
+    .modal-header h2 {
+        font-size: 1.8rem;
+    }
 }
