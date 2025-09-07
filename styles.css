@@ -1,0 +1,109 @@
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #1a1a1a;
+    --accent-color: #888;
+    --font-family: 'Montserrat', sans-serif;
+    --padding-sides: 4vw;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    overflow-x: hidden;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem var(--padding-sides);
+    z-index: 10;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.main-header a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 2rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.project-list {
+    padding: 10rem var(--padding-sides) 10rem 0; /* Mais padding em cima/baixo para rolar */
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha o texto à direita */
+}
+
+.project-item {
+    text-decoration: none;
+    color: var(--accent-color);
+    margin: 2rem 0;
+    padding-right: var(--padding-sides);
+    transition: color 0.4s ease;
+}
+
+.project-item h1 {
+    font-size: clamp(2rem, 6vw, 4.5rem); /* Tipografia grande e responsiva */
+    line-height: 1.1;
+    text-align: right;
+}
+
+.project-item.is-visible {
+    color: var(--text-color); /* Cor do projeto ativo */
+}
+
+.project-preview {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-sides);
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o espaço */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+}
+
+.project-image.active {
+    opacity: 1;
+    visibility: visible;
+}
