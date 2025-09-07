@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'proj1',
             title: 'ARMANI',
             description: 'Uma campanha focada na textura e elegância do novo batom matte da Armani.',
-            coverImage: 'https://images.unsplash.com/photo-1620042222109-3733734e6210?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+            coverImage: 'https://cdn.cosmos.so/0d9fff45-13c7-4e30-b5b7-784ee56c7ff9?format=jpeg',
             gallery: [
                 'https://images.unsplash.com/photo-1590155206743-73c2164e2193?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
                 'https://images.unsplash.com/photo-1622182995420-2b1b5c1c8a1a?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
