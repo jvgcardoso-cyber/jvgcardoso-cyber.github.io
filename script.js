@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'proj3',
             title: 'CHLOE',
             description: 'Campanha de fragrância para a Chloe, capturando a essência da liberdade e do frescor.',
-            coverImage: 'https://images.unsplash.com/photo-1595535373190-fc96a29d9448?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800',
+            coverImage: 'https://cdn.cosmos.so/69046fb3-0544-483d-b419-983cc66755f9.?format=jpeg',
             gallery: [
                 'https://images.unsplash.com/photo-1557128362-9a25785f2373?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
                 'https://images.unsplash.com/photo-1627993099209-a720618b765a?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200'
