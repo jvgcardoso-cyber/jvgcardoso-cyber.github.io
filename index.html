@@ -1,4 +1,4 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -20,33 +20,25 @@ x<!DOCTYPE html>
 
     <main class="portfolio-container">
         <div class="project-list">
-            <a href="#" class="project-item" data-project="proj1">
-                <h1>ARMANI</h1>
-            </a>
-            <a href="#" class="project-item" data-project="proj2">
-                <h1>VOGUE</h1>
-            </a>
-            <a href="#" class="project-item" data-project="proj3">
-                <h1>CHLOE</h1>
-            </a>
-            <a href="#" class="project-item" data-project="proj4">
-                <h1>PERSONAL SERIES</h1>
-            </a>
-            <a href="#" class="project-item" data-project="proj5">
-                <h1>TYPOLOGY</h1>
-            </a>
-        </div>
+            </div>
 
         <div class="project-preview">
             <div class="image-wrapper">
-                <img src="https://images.unsplash.com/photo-1620042222109-3733734e6210?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" class="project-image" data-project="proj1" alt="Projeto Armani">
-                <img src="https://images.unsplash.com/photo-1589991399596-1055a4756a18?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" class="project-image" data-project="proj2" alt="Projeto Vogue">
-                <img src="https://images.unsplash.com/photo-1595535373190-fc96a29d9448?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" class="project-image" data-project="proj3" alt="Projeto Chloe">
-                <img src="https://images.unsplash.com/photo-1521577902-b25840228b3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" class="project-image" data-project="proj4" alt="Projeto Pessoal">
-                <img src="https://images.unsplash.com/photo-1617823902316-222a762b664f?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=800" class="project-image" data-project="proj5" alt="Projeto Typology">
-            </div>
+                </div>
         </div>
     </main>
+
+    <div id="projectModal" class="project-modal">
+        <button class="modal-close-btn">&times;</button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+            </div>
+            <div id="modalGallery" class="modal-gallery">
+                </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
