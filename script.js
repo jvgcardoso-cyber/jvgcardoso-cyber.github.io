@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'proj2',
             title: 'VOGUE',
             description: 'Editorial para a Vogue sobre a intersecção da forma humana com a natureza.',
-            coverImage: 'https://cdn.cosmos.so/54dbac93-9757-45bb-b930-809b096d0e2d?format=jpeg',
+            coverImage: 'https://instagram.fcgh65-1.fna.fbcdn.net/v/t51.29350-15/310868122_659930102140579_4806699279564586596_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQuaW1hZ2VfdXJsZ2VuLjE0NDB4MTgwMC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UuYzIifQ&_nc_ht=instagram.fcgh65-1.fna.fbcdn.net&_nc_cat=107&_nc_oc=Q6cZ2QEjzjsjvndi6b3HTs04e43rOk-GTEPQhh583WnKBEQ4iRd4clZD3kDekA5ee4ZAR3Fn-uqhhMqWaGUAXiHXaJrz&_nc_ohc=umiPsaSF81EQ7kNvwHg7nED&_nc_gid=qwnt-nXjREJrx2i_uZqiEA&edm=APoiHPcBAAAA&ccb=7-5&ig_cache_key=Mjk0NTU3MzgxNjM5MTgwMTE5Nw%3D%3D.3-ccb7-5&oh=00_AfY_40iDS0Tk-aWtWf4Px50uO1hVKOkrvCGef4CtfLITEw&oe=68C564AE&_nc_sid=22de04',
             gallery: [
                 'https://images.unsplash.com/photo-1521577902-b25840228b3e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
                 'https://images.unsplash.com/photo-1605557626786-0565b6d5f47e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
